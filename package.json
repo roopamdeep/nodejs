@@ -3,13 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.2.0",
+    "jshint": "^2.12.0",
+    "mongoose": "^5.10.0",
+    "nodemon": "^2.0.4",
+    "underscore": "^1.10.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roopamdeep/nodejs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    
-  }
+  "bugs": {
+    "url": "https://github.com/roopamdeep/nodejs/issues"
+  },
+  "homepage": "https://github.com/roopamdeep/nodejs#readme"
 }

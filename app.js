@@ -1,3 +1,8 @@
+
 var logger = require('./logger');
 
-console.log(logger);
+logger = 1;
+
+
+logger.logger();
+//console.log(module);
