@@ -1,14 +1,21 @@
-console.log("Before");
+onsole.log("Before");
 //CALLBACK HELL   SOLUTION: NAMED FUNCTIONS
-getUser(1, (user) => {
-  console.log("callback returned me a value", user);
-  getRepos(user.githubusername, (repos) => {
+getUser(1, getRepositories);
+
+
+function getRepositories(user){
+    console.log("callback returned me a value", user);
+    getRepositories(user.githubusername, getCommits );
+}
+function getCommits(repos) {
     console.log("fetched the repo list for this username ", repos);
-    getCommits(user, (commits) => {
-      console.log("the commits are", commits);
-    });
-  });
-});
+    getCommits(user,displayCommits);
+}
+function displayCommits(commits)  {
+    console.log("the commits are", commits);
+  }
+    
+
 
 console.log("After");
 
@@ -17,7 +24,7 @@ function getUser(id, callback) {
     callback({ id: id, githubusername: "mosh" });
   }, 2000);
 }
-function getRepos(username, callback) {
+function getRepositories(username, callback) {
   console.log("fetch");
   callback(["repo1", "repo2", "repo3"]);
 }
