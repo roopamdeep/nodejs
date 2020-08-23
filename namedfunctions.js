@@ -1,4 +1,4 @@
-onsole.log("Before");
+console.log("Before");
 //CALLBACK HELL   SOLUTION: NAMED FUNCTIONS
 getUser(1, getRepositories);
 
